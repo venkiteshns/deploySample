@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Axios from 'axios';
+const url = "https://deploysample-tu5q.onrender.com";
 
 const App = () => {
   const [data,setData] = useState();
 
   const getData = async () =>{
-    const response = await Axios.get("/getData")
+    const response = await Axios.get(`${url}/getData`);
     setData(response.data);
   }
 
